@@ -1,0 +1,26 @@
+<!-- product-form.component.html -->
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label for="name">Name</label>
+    <input id="name" formControlName="name" class="form-control" />
+  </div>
+  <div class="mb-3">
+    <label for="price">Price</label>
+    <input
+      id="price"
+      formControlName="price"
+      class="form-control"
+      type="number"
+    />
+  </div>
+  <div class="mb-3">
+    <label> <input type="checkbox" formControlName="checked" /> Checked </label>
+  </div>
+  <button
+    type="submit"
+    class="btn btn-primary"
+    [disabled]="productForm.invalid"
+  >
+    Add Product
+  </button>
+</form>

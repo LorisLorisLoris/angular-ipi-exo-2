@@ -1,0 +1,14 @@
+<!-- product.component.html -->
+<div class="container">
+  <h2>Product Management</h2>
+
+  <!-- Formulaire d'ajout de produit -->
+  <app-product-form (productAdded)="addProduct($event)"></app-product-form>
+
+  <!-- Liste des produits -->
+  <app-product-list
+    [products]="products"
+    (productDeleted)="deleteProduct($event)"
+  >
+  </app-product-list>
+</div>
